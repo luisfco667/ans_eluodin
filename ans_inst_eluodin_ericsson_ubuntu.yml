@@ -1,6 +1,7 @@
 ---
 - name: Ansible Playbook foe ELUODIN ERICSSON VirtualBox Ubuntu24.04.2
   hosts: localhost
+  connection: local
   become: true
 
   tasks:
