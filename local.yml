@@ -74,4 +74,4 @@
         sudo chown {{ lookup('env','USER') }} -R /home/{{ lookup('env','USER') }}/ltng/
         cd /home/{{ lookup('env','USER') }}/ericsson_temp/moshell*/
         bash moshell_install -p moshelldir=/home/{{ lookup('env','USER') }}/,java=/usr/bin/java,perl=/usr/bin/perl,unr=0
-        sudo chown {{ lookup('env','USER') }} -R /home/{{ lookup('env','USER') }}/moshell
+     
