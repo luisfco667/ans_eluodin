@@ -65,7 +65,7 @@
         sudo apt update -y
         sudp apt upgrade -y
         sudo chmod -R 777 /home/{{ lookup('env','USER') }}/ericsson_temp/
-        cd ericsson_temp/
+        cd /home/{{ lookup('env','USER') }}/ericsson_temp/
         cp .bashrc /home/{{ lookup('env','USER') }}/
         7za -y x "*.zip"
         sudo chown {{ lookup('env','USER') }} -R /home/{{ lookup('env','USER') }}/ericsson_temp/
