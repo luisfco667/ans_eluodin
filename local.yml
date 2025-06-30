@@ -1,11 +1,11 @@
 ---
-- name: Ansible Playbook foe ELUODIN ERICSSON VirtualBox Ubuntu24.04.2
+- name: Ansible Playbook for ELUODIN ERICSSON VirtualBox Ubuntu24.04.2
   hosts: localhost
   connection: local
   become: true
 
   tasks:
-   - name: Printing someting on the stdout
+   - name: Printing on the stdout
      debug:
       msg:
        - "This is an quick installation, please, wait ....."
@@ -62,6 +62,8 @@
 
    - name: Install moshell & ltng
      shell: |
+        sudo apt update -y
+        sudp apt upgrade -y
         sudo chmod -R 777 /home/{{ lookup('env','USER') }}/ericsson_temp/
         cd ericsson_temp/
         cp .bashrc /home/{{ lookup('env','USER') }}/
